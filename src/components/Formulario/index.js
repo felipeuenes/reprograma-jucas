@@ -8,6 +8,10 @@ import { useState } from 'react'
 const Formulario = (props) => {
 
    
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -15,15 +19,15 @@ const Formulario = (props) => {
             nome,
             cargo,
             imagem,
-            time,
+            time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
 
-    const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
-    const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
 
     return(
         <section className="formulario">
